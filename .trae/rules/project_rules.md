@@ -91,24 +91,37 @@ UI(View) → ViewModel → Repository → DataSource(Remote/Local)
 ---
 
 ## 📁 强制项目结构规范
+* 总体模块划分（示例）
+  /app                     // Host app，负责启动 & 组合 feature（可也很轻）
+  /core
+  /core-network          // 网络、OkHttp、Retrofit 配置
+  /core-db               // Room、数据库抽象
+  /core-models           // 公共 DTO、domain model
+  /core-di               // 通用 DI bindings（Hilt modules）
+  /core-logging          // Logging / error reporting
+  /feature-login
+  /feature-home
+  /feature-profile
+  /feature-order
+  /feature-payment
+  /ui-common               // 共享 UI 组件（Compose / widgets）
+  /sdk-analytics          // 独立 SDK 风格模块（可灰度）
+  /feature-impl-xxx       // 若使用插件化，独立实现包
 
-app/
-├── base/
-│   ├── BaseActivity.kt
-│   ├── BaseFragment.kt
-│   ├── BaseViewModel.kt
-│   └── BaseComposePage.kt
-├── data/
-│   ├── local/
-│   ├── remote/
-│   └── repository/
-├── di/
-├── ui/
-│   ├── main/
-│   └── module/
-├── utils/
-├── widget/
-└── App.kt
+* 分层（每个 Feature 内部）
+  每个 feature-xxx 内部推荐分层（MVVM + UseCase）：
+  feature-xxx/
+  ├─ ui/                    // Compose / Activity / Fragment
+  ├─ viewmodel/             // ViewModel（StateFlow / LiveData）
+  ├─ domain/
+  │   ├─ usecase/           // UseCase（业务用例）——纯 Kotlin，可测试
+  │   └─ model/             // Domain model / DTO
+  ├─ data/
+  │   ├─ repository/        // Repository 接口实现（与 core-db/core-network 配合）
+  │   └─ local/remote       // LocalDataSource / RemoteDataSource
+  └─ api/                   // 对外暴露的 Contract（接口/路由）
+
+
 
 ---
 
