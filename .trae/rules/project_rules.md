@@ -92,21 +92,37 @@ UI(View) → ViewModel → Repository → DataSource(Remote/Local)
 
 ## 📁 强制项目结构规范
 * 总体模块划分（示例）
-  /app                     // Host app，负责启动 & 组合 feature（可也很轻）
-  /core
-  /core-network          // 网络、OkHttp、Retrofit 配置
-  /core-db               // Room、数据库抽象
-  /core-models           // 公共 DTO、domain model
-  /core-di               // 通用 DI bindings（Hilt modules）
-  /core-logging          // Logging / error reporting
-  /feature-login
-  /feature-home
-  /feature-profile
-  /feature-order
-  /feature-payment
-  /ui-common               // 共享 UI 组件（Compose / widgets）
-  /sdk-analytics          // 独立 SDK 风格模块（可灰度）
-  /feature-impl-xxx       // 若使用插件化，独立实现包
+  project-root/
+  ├── app/                         # Host App（仅壳工程，组合 feature）
+  │
+  ├── core/                        # 基础能力层（可按需继续拆分）
+  │
+  ├── core-network/                # 网络：OkHttp / Retrofit / Interceptors
+  │
+  ├── core-db/                     # 数据库：Room / DataStore / DAO 抽象
+  │
+  ├── core-models/                 # 公共数据模型（DTO / Domain Model）
+  │
+  ├── core-di/                     # Hilt 全局 Module / 通用依赖注入绑定
+  │
+  ├── core-logging/                # 日志 & 异常上报（Crashlytics / Sentry）
+  │
+  ├── feature-login/               # 登录模块（UI + ViewModel + UseCase + Repo）
+  │
+  ├── feature-home/                # 首页模块
+  │
+  ├── feature-profile/             # 个人中心模块
+  │
+  ├── feature-order/               # 订单模块
+  │
+  ├── feature-payment/             # 支付模块
+  │
+  ├── ui-common/                   # Compose UI 公共组件（Button、Dialog、Theme等）
+  │
+  ├── sdk-analytics/               # 分析埋点独立 SDK（可单独 A/B、按需集成）
+  │
+  └── feature-impl-xxx/            # 插件化或动态 Feature 的实现包
+
 
 * 分层（每个 Feature 内部）
   每个 feature-xxx 内部推荐分层（MVVM + UseCase）：
