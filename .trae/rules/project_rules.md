@@ -190,8 +190,9 @@ UI(View) → ViewModel → Repository → DataSource(Remote/Local)
 * 所有的密码输入框都要添加密码可见性切换功能
 * 所有的Compose文件命名以Screen结尾：例如LoginScreen、HomeScreen等
 
-### 项目依赖规范
+### 项目依赖库使用规范
 * 所有的依赖都要使用libs.versions.toml管理起来
+* 项目中的JSON解析库默认使用Gson，禁止使用其他JSON解析库
 
 
 ---
