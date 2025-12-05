@@ -52,4 +52,13 @@ dependencyResolutionManagement {
 
 rootProject.name = "WXXNovaCompose"
 include(":app")
+include(":core")
+include(":core-network")
+include(":core-db")
+include(":core-models")
+include(":core-di")
+include(":core-logging")
+include(":feature-home")
+include(":feature-projectcategory")
+include(":ui-common")
  

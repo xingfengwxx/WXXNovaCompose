@@ -68,51 +68,28 @@ dependencies {
     implementation(libs.androidx.compose.ui.tooling.preview)
     implementation(libs.androidx.compose.material)
     implementation(libs.androidx.compose.material3)
-
-    testImplementation(libs.junit)
-    androidTestImplementation(libs.androidx.junit)
-    androidTestImplementation(libs.androidx.espresso.core)
-    androidTestImplementation(platform(libs.androidx.compose.bom))
-    androidTestImplementation(libs.androidx.compose.ui.test.junit4)
+    implementation(libs.androidx.lifecycle.viewmodel.compose)
+    implementation(libs.androidx.navigation.compose)
     debugImplementation(libs.androidx.compose.ui.tooling)
     debugImplementation(libs.androidx.compose.ui.test.manifest)
-
+    
     // Hilt
     implementation(libs.hilt.android)
     kapt(libs.hilt.compiler)
     implementation(libs.hilt.navigation.compose)
-    implementation(libs.androidx.navigation.compose)
-
-    // Coroutines
-    implementation(libs.kotlinx.coroutines.core)
-    implementation(libs.kotlinx.coroutines.android)
-
-    // Network
-    implementation(libs.retrofit)
-    implementation(libs.retrofit.converter.gson)
-    implementation(libs.okhttp)
-    implementation(libs.okhttp.logging.interceptor)
-    implementation(libs.gson)
-
-    // Room
-    implementation(libs.androidx.room.runtime)
-    implementation(libs.androidx.room.ktx)
-    kapt(libs.androidx.room.compiler)
-
-    // DataStore
-    implementation(libs.androidx.datastore.preferences)
-
-    // Paging
-    implementation(libs.androidx.paging.runtime)
-    implementation(libs.androidx.paging.compose)
-
-    // Image Loading
-    implementation(libs.glide)
-    implementation(libs.glide.compose)
-    implementation(libs.coil)
-    implementation(libs.coil.compose)
-
-    implementation(libs.blankj.utilcodex)
-
-    implementation(libs.getactivity.toaster)
+    
+    // Core modules
+    implementation(project(":core"))
+    implementation(project(":core-di"))
+    implementation(project(":core-network"))
+    implementation(project(":core-db"))
+    implementation(project(":core-models"))
+    implementation(project(":core-logging"))
+    
+    // UI common module
+    implementation(project(":ui-common"))
+    
+    // Feature modules
+    implementation(project(":feature-home"))
+    implementation(project(":feature-projectcategory"))
 }

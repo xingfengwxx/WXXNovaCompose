@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">WXXNovaCompose</string>
+
+    <!-- 错误信息 -->
+    <string name="error_network_request_failed">网络请求失败</string>
+    <string name="error_unknown">未知错误</string>
+
+    <string name="home_retry">重试</string>
+
+    <!-- 项目分类页面（Room 数据库示例） -->
+    <string name="project_category_title">项目分类</string>
+    <string name="project_category_title_demo">Room 数据库示例</string>
+    <string name="project_category_content_demo">点击查看 Room 数据库功能演示</string>
+    <string name="project_category_refresh">刷新</string>
+    <string name="project_category_loading">加载中...</string>
+    <string name="project_category_empty">暂无数据</string>
+    <string name="project_category_name">名称</string>
+    <string name="project_category_id">ID</string>
+    <string name="project_category_order">排序</string>
+    <string name="project_category_visible">可见</string>
+    <string name="project_category_visible_yes">是</string>
+    <string name="project_category_visible_no">否</string>
+    <string name="project_category_type">类型</string>
+</resources>

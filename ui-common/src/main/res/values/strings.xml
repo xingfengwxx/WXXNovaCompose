@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">WXXNovaCompose</string>
+
+    <!-- Error Messages -->
+    <string name="error_network_request_failed">Network Request Failed</string>
+    <string name="error_unknown">Unknown Error</string>
+
+    <string name="home_retry">Retry</string>
+
+    <!-- Bottom Navigation -->
+    <string name="bottom_nav_home">首页</string>
+    <string name="bottom_nav_project">项目分类</string>
+
+    <!-- Project Category Page (Room Database Example) -->
+    <string name="project_category_title">Project Category</string>
+    <string name="project_category_title_demo">Room Database Example</string>
+    <string name="project_category_content_demo">Click to view Room database demo</string>
+    <string name="project_category_refresh">Refresh</string>
+    <string name="project_category_loading">Loading...</string>
+    <string name="project_category_empty">No data available</string>
+    <string name="project_category_name">Name</string>
+    <string name="project_category_id">ID</string>
+    <string name="project_category_order">Order</string>
+    <string name="project_category_visible">Visible</string>
+    <string name="project_category_visible_yes">Yes</string>
+    <string name="project_category_visible_no">No</string>
+    <string name="project_category_type">Type</string>
+</resources>

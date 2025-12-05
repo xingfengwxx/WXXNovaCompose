@@ -6,8 +6,8 @@ import androidx.navigation.NavGraphBuilder
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
-import com.wangxingxing.wxxnovacompose.ui.home.HomeScreen
-import com.wangxingxing.wxxnovacompose.ui.projectcategory.ProjectCategoryScreen
+import com.wangxingxing.wxxnovacompose.feature.home.ui.HomeScreen
+import com.wangxingxing.wxxnovacompose.feature.projectcategory.ui.ProjectCategoryScreen
 
 /**
  * author : 王星星
