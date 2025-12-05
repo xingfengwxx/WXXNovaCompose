@@ -1,9 +1,9 @@
 package com.wangxingxing.wxxnovacompose.data.remote
 
-import com.squareup.moshi.Moshi
-import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
+import com.google.gson.Gson
+import com.google.gson.GsonBuilder
 import retrofit2.Retrofit
-import retrofit2.converter.moshi.MoshiConverterFactory
+import retrofit2.converter.gson.GsonConverterFactory
 
 /**
  * author : 王星星
@@ -13,16 +13,16 @@ import retrofit2.converter.moshi.MoshiConverterFactory
  */
 object RetrofitClient {
 
-    // 创建Moshi实例
-    private val moshi = Moshi.Builder()
-        .add(KotlinJsonAdapterFactory())
-        .build()
+    // 创建Gson实例
+    private val gson = GsonBuilder()
+        .setLenient()
+        .create()
 
     // 创建Retrofit实例
     private val retrofit = Retrofit.Builder()
         .baseUrl(NetworkConfig.BASE_URL)
         .client(OkHttpConfig.createOkHttpClient())
-        .addConverterFactory(MoshiConverterFactory.create(moshi))
+        .addConverterFactory(GsonConverterFactory.create(gson))
         .build()
 
     /**

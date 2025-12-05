@@ -1,6 +1,6 @@
 package com.wangxingxing.wxxnovacompose.data.remote.model
 
-import com.squareup.moshi.Json
+import com.google.gson.annotations.SerializedName
 
 /**
  * author : 王星星
@@ -9,15 +9,15 @@ import com.squareup.moshi.Json
  * description : 用户响应数据模型
  */
 data class UserResponse(
-    @Json(name = "id")
+    @SerializedName("id")
     val id: Int,
     
-    @Json(name = "name")
+    @SerializedName("name")
     val name: String,
     
-    @Json(name = "email")
+    @SerializedName("email")
     val email: String,
     
-    @Json(name = "avatar")
+    @SerializedName("avatar")
     val avatarUrl: String
 )
