@@ -1,4 +1,4 @@
-package com.wangxingxing.wxxnovacompose
+package com.wangxingxing.wxxnovacompose.ui
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
