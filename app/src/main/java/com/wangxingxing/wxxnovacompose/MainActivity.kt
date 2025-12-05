@@ -6,8 +6,8 @@ import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
+import com.wangxingxing.wxxnovacompose.ui.home.HomeScreen
 import com.wangxingxing.wxxnovacompose.ui.theme.WXXNovaComposeTheme
-import com.wangxingxing.wxxnovacompose.ui.user.UserListPage
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -17,7 +17,7 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             WXXNovaComposeTheme {
-                UserListPage()
+                HomeScreen()
             }
         }
     }
@@ -27,6 +27,6 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun MainActivityPreview() {
     WXXNovaComposeTheme {
-        UserListPage()
+        HomeScreen()
     }
 }

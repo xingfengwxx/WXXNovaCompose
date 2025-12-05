@@ -85,9 +85,15 @@ dependencies {
     implementation(libs.okhttp.logging.interceptor)
     implementation(libs.gson)
 
+    // Paging
+    implementation(libs.androidx.paging.runtime)
+    implementation(libs.androidx.paging.compose)
+
     // Image Loading
     implementation(libs.glide)
     implementation(libs.glide.compose)
+    implementation(libs.coil)
+    implementation(libs.coil.compose)
 
     implementation(libs.blankj.utilcodex)
 

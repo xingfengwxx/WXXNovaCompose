@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">WXXNovaCompose</string>
+
+    <!-- Error Messages -->
+    <string name="error_network_request_failed">Network Request Failed</string>
+    <string name="error_unknown">Unknown Error</string>
+
+    <string name="home_retry">Retry</string>
 </resources>
