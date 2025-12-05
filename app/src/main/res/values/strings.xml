@@ -7,6 +7,10 @@
 
     <string name="home_retry">Retry</string>
 
+    <!-- Bottom Navigation -->
+    <string name="bottom_nav_home">首页</string>
+    <string name="bottom_nav_project">项目分类</string>
+
     <!-- Project Category Page (Room Database Example) -->
     <string name="project_category_title">Project Category</string>
     <string name="project_category_title_demo">Room Database Example</string>
