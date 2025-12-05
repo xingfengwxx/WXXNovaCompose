@@ -171,7 +171,7 @@ UI(View) → ViewModel → Repository → DataSource(Remote/Local)
 * ViewModel 暴露 StateFlow
 
 ### 日志打印规范：
-* 所有日志打印都必须使用 LogUtils 工具类
+* 所有日志打印都必须使用com.blankj.utilcode.util.LogUtils 工具类,com.blankj.utilcode.util这是一个工具类库
 * 调用方式如下：
 * LogUtils.i("内容")
 * LogUtils.d("内容")
@@ -204,7 +204,7 @@ Tare 必须：
 * 输出完整文件代码，需要检查编译是否通过，是否有运行时异常
 * 包含 package 声明
 * 包含 import 语句
-* 保证代码可直接运行
+* 保证代码可直接运行，和AndroidStudio一样使用安装命令执行
 * 不允许伪代码
 
 ---
