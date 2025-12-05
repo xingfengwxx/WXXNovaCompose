@@ -2,10 +2,10 @@ package com.wangxingxing.wxxnovacompose.ui.user
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.blankj.utilcode.util.LogUtils
 import com.wangxingxing.wxxnovacompose.base.BaseViewModel
 import com.wangxingxing.wxxnovacompose.data.remote.model.UserResponse
 import com.wangxingxing.wxxnovacompose.data.repository.UserRepository
-import com.wangxingxing.wxxnovacompose.utils.LogUtils
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow

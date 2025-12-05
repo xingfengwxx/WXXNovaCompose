@@ -53,8 +53,8 @@ dependencies {
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
-    implementation("androidx.appcompat:appcompat:1.7.0")
-    implementation("androidx.fragment:fragment-ktx:1.8.3")
+    implementation(libs.androidx.appcompat)
+    implementation(libs.androidx.fragment.ktx)
     implementation(platform(libs.androidx.compose.bom))
     implementation(libs.androidx.compose.ui)
     implementation(libs.androidx.compose.ui.graphics)
@@ -89,4 +89,8 @@ dependencies {
     // Image Loading
     implementation(libs.glide)
     implementation(libs.glide.compose)
+
+    implementation(libs.blankj.utilcodex)
+
+    implementation(libs.getactivity.toaster)
 }
