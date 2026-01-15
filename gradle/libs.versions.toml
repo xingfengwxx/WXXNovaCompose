@@ -24,8 +24,9 @@ fragmentKtx = "1.8.3"
 utilcodex = "1.31.1"
 toaster = "13.8"
 paging = "3.3.5"
-room = "2.8.4"
+room = "2.6.1"
 datastore = "1.2.0"
+kotlinxSerialization = "1.7.3"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -71,6 +72,9 @@ androidx-lifecycle-viewmodel-compose = { group = "androidx.lifecycle", name = "l
 # Coroutines
 kotlinx-coroutines-core = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-core", version.ref = "coroutines" }
 kotlinx-coroutines-android = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-android", version.ref = "coroutines" }
+
+# Serialization
+kotlinx-serialization-json = { group = "org.jetbrains.kotlinx", name = "kotlinx-serialization-json", version.ref = "kotlinxSerialization" }
 
 # Network
 retrofit = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofit" }
